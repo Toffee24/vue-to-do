@@ -1,0 +1,12 @@
+/**
+ * Created by 差钱吗 on 2017/10/20.
+ */
+import axios from 'axios'
+export const getTodoList = params => {
+  return axios.get(`/todo/list`, {
+    params: params
+  })
+}
+export const addTodo = params => {
+  return axios.post(`/todo/addTodo`, params).then(res => res.data)
+}
